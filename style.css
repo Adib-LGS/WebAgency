@@ -1,26 +1,5 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("webagency_images/fonts/Roboto-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto-Light";
-  src: url("webagency_images/fonts/Roboto-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto-Medium";
-  src: url("webagency_images/fonts/Roboto-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
-  font-family: "robotoregular", arial, serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -35,7 +14,7 @@ nav {
   top: 0;
   width: 100%;
   background-color: white;
-  z-index: 1;
+  z-index: 10;
 }
 
 /*_____Logo_____*/
@@ -62,7 +41,7 @@ nav a {
   color: #555555;
   margin-right: 15px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* _________Tiré Bleu au dessus de Nav_Bar _________*/
@@ -105,12 +84,14 @@ ul a:hover {
   max-width: 550px;
   color: white;
   text-transform: uppercase;
+  margin-bottom: 3px;
 }
 
 #slider p {
-  font-size: 1rem;
-  margin-top: -15px;
+  font-size: 1.2rem;
+  margin-left: 0;
   color: white;
+  margin-bottom: 36px;
 }
 
 #slider a {
@@ -122,6 +103,7 @@ ul a:hover {
 }
 
 /* _________Bouton Plus d'infos _________*/
+
 #bouton_infos {
   text-decoration: none;
   padding: 10px;
@@ -197,13 +179,13 @@ ul a:hover {
 }
 
 .sep_line {
-  width: 20%;
-  height: 2px;
+  width: 10%;
+  height: 1px;
   display: flex;
   margin-bottom: 30px;
   justify-content: center;
   background-color: lightgray;
-  margin-left: 40%;
+  margin: 0 auto;
 }
 
 /*______Separation Blue Circle____*/
@@ -213,7 +195,7 @@ ul a:hover {
   width: 20px;
   height: 20px;
   background-color: #5cadd3;
-  margin-top: -3%;
+  margin-top: -5%;
 }
 
 .title {
@@ -222,15 +204,18 @@ ul a:hover {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
 }
 
-.title h2 {
+h2 {
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
-.title p {
-  margin-left: 20%;
-  margin-right: 20%;
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
 }
 
 /*______Text Icons_____*/
@@ -240,8 +225,8 @@ ul a:hover {
 
 .mini_text p {
   color: #272727;
-  font-size: 1.2rem;
   margin-top: 4px;
+  margin-left: 0;
 }
 
 .mini_text h3 {
@@ -315,21 +300,11 @@ ul a:hover {
   padding-bottom: 10px;
 }
 
-.title h2 {
-  font-family: "Roboto";
-  font-size: 3rem;
-}
-
-.title p {
-  font-family: "Roboto-Light";
-  font-size: 1.5rem;
-}
-
 /* _________NOS PROJETS Nav Bar_________*/
 
 .nav_projets {
   text-align: center;
-  font-family: "Roboto-Light";
+  font-family: "Roboto", sans-serif;
 }
 
 .nav_projets ul {
@@ -432,7 +407,7 @@ figcaption i {
   left: 20%;
 }
 
-/*_____Colored Circley around Eye Icon_____*/
+/*_____Colored Circle around Eye Icon_____*/
 .ieye {
   background-color: #4591b1;
   position: absolute;
@@ -445,10 +420,10 @@ figcaption i {
   bottom: 70%;
 }
 
-figcaption h4 {
+figcaption h3 {
   width: 100%;
   color: white;
-  margin-left: -30%;
+  margin-left: -25%;
 }
 
 figcaption {
@@ -496,7 +471,14 @@ figure img:hover + figcaption {
   padding: 20px 20px 20px 20px;
   margin-bottom: 0;
   background-color: rgba(255, 255, 255, 0.7);
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
+}
+
+/*___Webagency Form Title___*/
+
+.bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
 .formulaire h2 {
@@ -524,6 +506,9 @@ textarea {
   padding: 10px;
   height: 195px;
   border: rgb(207, 208, 208) solid 1px;
+  /*Forcer l'héritage Police Roboto*/
+  font-family: inherit;
+  font-size: 0.8rem;
 }
 
 /*_____Send Message Button______*/
@@ -550,10 +535,304 @@ iframe {
   opacity: 0.8;
 }
 
+/*_____Media Queries  Medium (Tablette Ipad)______*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    padding-right: 50px;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
+
+  /*_____Logo_____*/
+  .logo {
+    padding-top: 12px;
+    padding-left: 31%;
+  }
+
+  nav img {
+    height: 51px;
+    margin-top: 6px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #555555;
+    margin-right: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* _________Tiré Bleu au dessus de Nav_Bar _________*/
+
+  ul a:hover {
+    border-top: 3px solid #5cadd3;
+    padding-top: 25px;
+  }
+
+  .menu {
+    padding-top: 30px;
+    padding-bottom: 3px;
+    margin-left: 19%;
+  }
+
+  /* _________Banner Slider img ________*/
+
+  #slider {
+    margin-top: 157px;
+  }
+
+  #slider h1 {
+    font-size: 2rem;
+  }
+
+  #slider p {
+    font-size: 0.8rem;
+  }
+
+  /* _________Section NOS SERVICES ________*/
+
+  #nos_services {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .sep_line {
+    width: 20%;
+    height: 1px;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    background-color: lightgray;
+    margin: 0 auto;
+  }
+
+  /*______Separation Blue Circle____*/
+  .blue_circle {
+    position: relative;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #5cadd3;
+    margin-top: -6%;
+  }
+
+  .title {
+    display: flex;
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  .title p {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  /*______Text Icons_____*/
+  .mini_text {
+    text-align: justify;
+    padding-left: 38px;
+  }
+
+  .mini_text p {
+    color: #272727;
+    font-size: 1.2rem;
+    margin-top: 4px;
+  }
+
+  .mini_text h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  /*____Global aside div Dispositon____*/
+  #aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /*____Img Nos Services Section_____*/
+  .img_services {
+    width: auto;
+    box-sizing: border-box;
+    margin-right: 0%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /*_____Text-Size Icon Desc____*/
+  .desc_services {
+    width: auto;
+  }
+
+  /*____Icons Alignement______*/
+  .desc_services li {
+    margin-bottom: 3%;
+  }
+
+  .desc_services ul {
+    list-style-type: none;
+  }
+
+  /*____Icons Gray Circle & Mini Blue Point_____*/
+  .icon {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  /* _________Section NOS PROJETS _________*/
+  #nos_projets {
+    padding: 0 0 20px 0;
+    margin: 0;
+  }
+
+  /* _________NOS PROJETS Nav Bar_________*/
+
+  .nav_projets {
+    text-align: center;
+    font-family: "Roboto";
+  }
+
+  .nav_projets ul {
+    flex-direction: row;
+  }
+
+  .nav_projets li {
+    padding: 0px 15px 0 15px;
+  }
+
+  .nav_projets li:first-child {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  .nav_projets li:last-child {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  /*________Img Nos Projets_______*/
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Retour a la ligne*/
+  }
+
+  /* _________Grid Portfolio Making  _________*/
+  figure img {
+    width: 100%;
+  }
+
+  figure {
+    width: 48%;
+  }
+
+  /* _________G.G Map & Form _________*/
+
+  .form_back {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #contact iframe {
+    width: 100%;
+    height: 641px;
+    border: 0;
+  }
+
+  /*______Form contact_____*/
+  .formulaire {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 55px;
+    top: 72px;
+    width: 43%;
+    height: 500px;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: "Roboto";
+  }
+
+  .formulaire h2 {
+    margin-top: 0;
+    font-size: 1.7em;
+  }
+
+  .formulaire p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: rgb(207, 208, 208) solid 1px;
+  }
+
+  /*___Seperate form column____*/
+  #name {
+    margin-top: 15px;
+  }
+
+  textarea {
+    padding: 10px;
+    height: 195px;
+    border: rgb(207, 208, 208) solid 1px;
+  }
+
+  /*_____Send Message Button______*/
+  #submit {
+    margin: 20px 0;
+    background-color: #5cadd3;
+    color: white;
+    border-bottom: 3px solid #5890a8;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    width: 113px;
+    min-height: 40px;
+  }
+
+  /*_______G.G Map Bakcground Color_________*/
+  .color_back_frame {
+    background-color: #5cadd3;
+  }
+
+  /*_________Map Transparency__________*/
+  iframe {
+    opacity: 0.8;
+  }
+}
+
 /*___________
 _________Media Queries Résolution  Iphone 6/7/8 Plus______*/
 
-@media (min-width: 375px) and (max-width: 667px) {
+@media (max-width: 767px) {
   /* _________ Head Size & space Logo ________ */
 
   #block_page {
@@ -622,8 +901,8 @@ _________Media Queries Résolution  Iphone 6/7/8 Plus______*/
   }
 
   .sep_line {
-    width: 40%;
-    margin-left: 29%;
+    width: 30%;
+    margin: 0 auto;
   }
 
   /*______Separation Blue Circle____*/
@@ -633,14 +912,14 @@ _________Media Queries Résolution  Iphone 6/7/8 Plus______*/
     width: 20px;
     height: 20px;
     background-color: #5cadd3;
-    margin-top: -5%;
+    margin-top: -7%;
   }
 
   .title {
     margin-top: 38%;
   }
 
-  .title h2 {
+  h2 {
     font-size: 1.9rem;
   }
 
@@ -673,6 +952,7 @@ _________Media Queries Résolution  Iphone 6/7/8 Plus______*/
     color: #272727;
     font-size: 1.2rem;
     margin-top: 4px;
+    font-size: 1.1rem;
   }
 
   .mini_text h3 {
@@ -821,298 +1101,6 @@ _________Media Queries Résolution  Iphone 6/7/8 Plus______*/
     border: 0;
   }
 
-  .color_back_frame {
-    background-color: #5cadd3;
-  }
-
-  /*_________Map Transparency__________*/
-  iframe {
-    opacity: 0.8;
-  }
-}
-
-/*_____Media Queries  Medium (Tablette Ipad)______*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  nav {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    padding-right: 50px;
-    top: 0;
-    background-color: white;
-    z-index: 1;
-  }
-
-  /*_____Logo_____*/
-  .logo {
-    padding-top: 12px;
-    padding-left: 31%;
-  }
-
-  nav img {
-    height: 51px;
-    margin-top: 6px;
-  }
-
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    margin-top: 0;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #555555;
-    margin-right: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  /* _________Tiré Bleu au dessus de Nav_Bar _________*/
-
-  ul a:hover {
-    border-top: 3px solid #5cadd3;
-    padding-top: 25px;
-  }
-
-  .menu {
-    padding-top: 30px;
-    padding-bottom: 3px;
-    margin-left: 19%;
-  }
-
-  /* _________Banner Slider img ________*/
-
-  #slider {
-    margin-top: 157px;
-  }
-
-  #slider h1 {
-    font-size: 2rem;
-  }
-
-  #slider p {
-    font-size: 0.8rem;
-  }
-  /* _________Section NOS SERVICES ________*/
-
-  #nos_services {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .sep_line {
-    width: 40%;
-    height: 2px;
-    display: flex;
-    margin-bottom: 30px;
-    justify-content: center;
-    background-color: lightgray;
-    margin-left: 30%;
-  }
-
-  /*______Separation Blue Circle____*/
-  .blue_circle {
-    position: relative;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: #5cadd3;
-    margin-top: -3%;
-  }
-
-  .title {
-    display: flex;
-    margin-top: 38%;
-    text-align: center;
-  }
-
-  .title h2 {
-    font-size: 1.9rem;
-  }
-
-  .title p {
-    margin-left: 8%;
-    margin-right: 8%;
-  }
-
-  /*______Text Icons_____*/
-  .mini_text {
-    text-align: justify;
-    padding-left: 38px;
-  }
-
-  .mini_text p {
-    color: #272727;
-    font-size: 1.2rem;
-    margin-top: 4px;
-  }
-
-  .mini_text h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: left;
-    font-size: 1.2rem;
-  }
-
-  /*____Global aside div Dispositon____*/
-  #aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-  /*____Img Nos Services Section_____*/
-  .img_services {
-    width: auto;
-    box-sizing: border-box;
-    margin-right: 0%;
-    display: flex;
-    justify-content: center;
-  }
-
-  /*_____Text-Size Icon Desc____*/
-  .desc_services {
-    width: auto;
-  }
-
-  /*____Icons Alignement______*/
-  .desc_services li {
-    margin-bottom: 3%;
-  }
-
-  .desc_services ul {
-    list-style-type: none;
-  }
-
-  /*____Icons Gray Circle & Mini Blue Point_____*/
-  .icon {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  /* _________Section NOS PROJETS _________*/
-  #nos_projets {
-    padding: 0 0 20px 0;
-    margin: 0;
-  }
-
-  /* _________NOS PROJETS Nav Bar_________*/
-
-  .nav_projets {
-    text-align: center;
-    font-family: "Roboto-Light";
-  }
-
-  .nav_projets ul {
-    flex-direction: row;
-  }
-
-  .nav_projets li {
-    padding: 0px 15px 0 15px;
-  }
-
-  .nav_projets li:first-child {
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-  }
-
-  .nav_projets li:last-child {
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-  }
-
-  /*________Img Nos Projets_______*/
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    /* Retour a la ligne*/
-  }
-
-  /* _________Grid Portfolio Making  _________*/
-  figure img {
-    width: 100%;
-  }
-
-  figure {
-    width: 48%;
-  }
-
-  /* _________G.G Map & Form _________*/
-
-  .form_back {
-    width: 100%;
-    z-index: 2;
-    position: absolute;
-  }
-
-  #contact iframe {
-    width: 100%;
-    height: 641px;
-    border: 0;
-  }
-
-  /*______Form contact_____*/
-  .formulaire {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 55px;
-    top: 72px;
-    width: 43%;
-    height: 500px;
-    padding: 20px 20px 20px 20px;
-    margin-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    font-family: "Roboto";
-  }
-
-  .formulaire h2 {
-    margin-top: 0;
-    font-size: 1.7em;
-  }
-
-  .formulaire p {
-    margin: 0;
-    font-size: 0.9em;
-  }
-
-  input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: rgb(207, 208, 208) solid 1px;
-  }
-
-  /*___Seperate form column____*/
-  #name {
-    margin-top: 15px;
-  }
-
-  textarea {
-    padding: 10px;
-    height: 195px;
-    border: rgb(207, 208, 208) solid 1px;
-  }
-
-  /*_____Send Message Button______*/
-  #submit {
-    margin: 20px 0;
-    background-color: #5cadd3;
-    color: white;
-    border-bottom: 3px solid #5890a8;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.8rem;
-    width: 113px;
-    min-height: 40px;
-  }
-
-  /*_______G.G Map Bakcground Color_________*/
   .color_back_frame {
     background-color: #5cadd3;
   }
