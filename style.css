@@ -195,7 +195,7 @@ ul a:hover {
   width: 20px;
   height: 20px;
   background-color: #5cadd3;
-  margin-top: -5%;
+  margin-top: -7%;
 }
 
 .title {
@@ -439,7 +439,7 @@ figcaption {
 
 /*_____Heritage & Visibility cursor Black Shadow-Line______*/
 
-figure img:hover + figcaption {
+figure img:hover+figcaption {
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
